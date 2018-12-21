@@ -20,20 +20,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
+        
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }
 
 // MARK: - Flow layout delegate
 
 // protocol defines methods that lets you implement - implementations needed to create class
-extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfCols: CGFloat = 2
-        let width = collectionView.frame.size.width
-        let xInsets: CGFloat = 10
-        let cellSpacing: CGFloat = 5
+extension ViewController: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let image = images[indexPath.item]
+        let height = image.size.height
         
-        return CGSize(width: (width / numberOfCols) - (xInsets + cellSpacing), height: (width / numberOfCols) - (xInsets + cellSpacing))
+        return height
     }
 }
 
