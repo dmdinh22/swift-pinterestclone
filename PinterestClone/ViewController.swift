@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: - Properties
+    let images = [#imageLiteral(resourceName: "image-1"), #imageLiteral(resourceName: "image-2"), #imageLiteral(resourceName: "image-3"), #imageLiteral(resourceName: "image-4"), #imageLiteral(resourceName: "image-5"), #imageLiteral(resourceName: "image-6"), #imageLiteral(resourceName: "image-7")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
