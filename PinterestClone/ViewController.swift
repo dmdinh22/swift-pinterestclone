@@ -23,6 +23,20 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Flow layout delegate
+
+// protocol defines methods that lets you implement - implementations needed to create class
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfCols: CGFloat = 2
+        let width = collectionView.frame.size.width
+        let xInsets: CGFloat = 10
+        let cellSpacing: CGFloat = 5
+        
+        return CGSize(width: (width / numberOfCols) - (xInsets + cellSpacing), height: (width / numberOfCols) - (xInsets + cellSpacing))
+    }
+}
+
 
 // MARK: Data Source
 
