@@ -30,7 +30,8 @@ class ViewController: UIViewController {
 
 // MARK: - Flow layout delegate
 
-// protocol defines methods that lets you implement - implementations needed to create class
+// protocol defines methods that lets you implement
+// implementations needed to create class
 extension ViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         let image = images[indexPath.item]
