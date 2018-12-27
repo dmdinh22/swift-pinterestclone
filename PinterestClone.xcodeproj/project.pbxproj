@@ -19,6 +19,7 @@
 		541C304521D4BE0A0026B50B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304421D4BE0A0026B50B /* Endpoint.swift */; };
 		541C304721D4BF790026B50B /* UnsplashClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304621D4BF790026B50B /* UnsplashClient.swift */; };
 		541C304921D4C05C0026B50B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304821D4C05C0026B50B /* Keys.swift */; };
+		541C304C21D4C7C00026B50B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304B21D4C7C00026B50B /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		541C304421D4BE0A0026B50B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		541C304621D4BF790026B50B /* UnsplashClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashClient.swift; sourceTree = "<group>"; };
 		541C304821D4C05C0026B50B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		541C304B21D4C7C00026B50B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		541C302721CB7EAA0026B50B /* PinterestClone */ = {
 			isa = PBXGroup;
 			children = (
+				541C304A21D4C7AD0026B50B /* ViewModels */,
 				541C303F21D4B2570026B50B /* APIClient */,
 				541C303A21CCF5B30026B50B /* Views */,
 				541C302821CB7EAA0026B50B /* AppDelegate.swift */,
@@ -99,6 +102,14 @@
 				541C304221D4B5400026B50B /* UnsplashImages.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		541C304A21D4C7AD0026B50B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				541C304B21D4C7C00026B50B /* ViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541C304C21D4C7C00026B50B /* ViewModel.swift in Sources */,
 				541C303E21CCF99B0026B50B /* PinterestLayout.swift in Sources */,
 				541C302B21CB7EAA0026B50B /* ViewController.swift in Sources */,
 				541C303C21CCF5E10026B50B /* PhotoCell.swift in Sources */,
