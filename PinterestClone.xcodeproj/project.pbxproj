@@ -17,6 +17,8 @@
 		541C304121D4B2690026B50B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304021D4B2690026B50B /* APIClient.swift */; };
 		541C304321D4B5400026B50B /* UnsplashImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304221D4B5400026B50B /* UnsplashImages.swift */; };
 		541C304521D4BE0A0026B50B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304421D4BE0A0026B50B /* Endpoint.swift */; };
+		541C304721D4BF790026B50B /* UnsplashClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304621D4BF790026B50B /* UnsplashClient.swift */; };
+		541C304921D4C05C0026B50B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304821D4C05C0026B50B /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		541C304021D4B2690026B50B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		541C304221D4B5400026B50B /* UnsplashImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImages.swift; sourceTree = "<group>"; };
 		541C304421D4BE0A0026B50B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		541C304621D4BF790026B50B /* UnsplashClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashClient.swift; sourceTree = "<group>"; };
+		541C304821D4C05C0026B50B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			children = (
 				541C302721CB7EAA0026B50B /* PinterestClone */,
 				541C302621CB7EAA0026B50B /* Products */,
+				541C304821D4C05C0026B50B /* Keys.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +95,7 @@
 			children = (
 				541C304021D4B2690026B50B /* APIClient.swift */,
 				541C304421D4BE0A0026B50B /* Endpoint.swift */,
+				541C304621D4BF790026B50B /* UnsplashClient.swift */,
 				541C304221D4B5400026B50B /* UnsplashImages.swift */,
 			);
 			path = APIClient;
@@ -170,8 +176,10 @@
 				541C302B21CB7EAA0026B50B /* ViewController.swift in Sources */,
 				541C303C21CCF5E10026B50B /* PhotoCell.swift in Sources */,
 				541C304121D4B2690026B50B /* APIClient.swift in Sources */,
+				541C304721D4BF790026B50B /* UnsplashClient.swift in Sources */,
 				541C304521D4BE0A0026B50B /* Endpoint.swift in Sources */,
 				541C302921CB7EAA0026B50B /* AppDelegate.swift in Sources */,
+				541C304921D4C05C0026B50B /* Keys.swift in Sources */,
 				541C304321D4B5400026B50B /* UnsplashImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

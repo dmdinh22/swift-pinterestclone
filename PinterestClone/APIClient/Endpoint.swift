@@ -14,6 +14,21 @@ protocol Endpoint {
     var urlParameters: [URLQueryItem] {get}
 }
 
+extension Endpoint {
+    // parses URLs & constucts URLs from parts
+    var urlComponent: URLComponents {
+        var urlComponent = URLComponents(string: baseURL)
+        urlComponent?.path = path
+        urlComponent?.queryItems = urlParameters
+
+        return urlComponent!
+    }
+
+    var request: URLRequest {
+        return URLRequest(url: urlComponent.url!)
+    }
+}
+
 enum Order: String {
     case popular, latest, oldest
 }
@@ -21,8 +36,8 @@ enum Order: String {
 enum UnsplashEndpoint: Endpoint {
     case photos(id: String, order: Order)
     
-    var baseUrl: String {
-     return "https://api.unsplash.com"
+    var baseURL: String {
+        return "https://api.unsplash.com"
     }
     
     var path: String {
@@ -34,7 +49,7 @@ enum UnsplashEndpoint: Endpoint {
     
     var urlParameters: [URLQueryItem] {
         switch self {
-        case .photos(let id):
+        case .photos(let id, let order):
             return [
                 URLQueryItem(name: "client_id", value: id),
                 URLQueryItem(name: "order_by", value: order.rawValue)
