@@ -55,18 +55,27 @@ class ViewModel {
     }
     
     private func fetchPhoto() {
+        // submit multiple diff work items and track when complete
+        let group = DispatchGroup()
+        
         self.photos.forEach { (photo) in
-            guard let imageData = try? Data(contentsOf: URL(string: "")!) else {
-                self.showError?(APIError.unknown)
-                return
+            DispatchQueue.global(qos: .background).async(group: group) {
+                group.enter()
+                
+                guard let imageData = try? Data(contentsOf: URL(string: "")!) else {
+                    self.showError?(APIError.unknown)
+                    return
+                }
+                
+                guard let image = UIImage(data: imageData) else {
+                    self.showError?(APIError.unknown)
+                    return
+                }
+                
+                self.cellViewModels.append(CellViewModel(image: image))
+                
+                group.leave()
             }
-            
-            guard let image = UIImage(data: imageData) else {
-                self.showError?(APIError.unknown)
-                return
-            }
-            
-            self.cellViewModels.append(CellViewModel(image: image))
         }
     }
 }
