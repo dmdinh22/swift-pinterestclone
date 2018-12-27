@@ -14,6 +14,7 @@
 		541C303321CB7EAB0026B50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541C303121CB7EAB0026B50B /* LaunchScreen.storyboard */; };
 		541C303C21CCF5E10026B50B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C303B21CCF5E10026B50B /* PhotoCell.swift */; };
 		541C303E21CCF99B0026B50B /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C303D21CCF99B0026B50B /* PinterestLayout.swift */; };
+		541C304121D4B2690026B50B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C304021D4B2690026B50B /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		541C303421CB7EAB0026B50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		541C303B21CCF5E10026B50B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		541C303D21CCF99B0026B50B /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		541C304021D4B2690026B50B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		541C302721CB7EAA0026B50B /* PinterestClone */ = {
 			isa = PBXGroup;
 			children = (
+				541C303F21D4B2570026B50B /* APIClient */,
 				541C303A21CCF5B30026B50B /* Views */,
 				541C302821CB7EAA0026B50B /* AppDelegate.swift */,
 				541C302A21CB7EAA0026B50B /* ViewController.swift */,
@@ -76,6 +79,14 @@
 				541C303D21CCF99B0026B50B /* PinterestLayout.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		541C303F21D4B2570026B50B /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				541C304021D4B2690026B50B /* APIClient.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				541C303E21CCF99B0026B50B /* PinterestLayout.swift in Sources */,
 				541C302B21CB7EAA0026B50B /* ViewController.swift in Sources */,
 				541C303C21CCF5E10026B50B /* PhotoCell.swift in Sources */,
+				541C304121D4B2690026B50B /* APIClient.swift in Sources */,
 				541C302921CB7EAA0026B50B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
