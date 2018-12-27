@@ -77,5 +77,10 @@ class ViewModel {
                 group.leave()
             }
         }
+        
+        group.notify(queue: .main) {
+            self.isLoading = false
+            self.reloadData?()
+        }
     }
 }
