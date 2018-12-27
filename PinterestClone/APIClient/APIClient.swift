@@ -15,11 +15,11 @@ enum Response<T> {
 
 protocol APIClient {
     var session: URLSession { get }
-    func get<T: Codable>(with request: URLRequest, completion: @escaping (Response<T>) -> Void)
+    func get<T: Codable>(with request: URLRequest, completion: @escaping (Response<[T]>) -> Void)
 }
 
 extension APIClient {
-    func get<T: Codable>(with request: URLRequest, completion: @escaping (Response<T>) -> Void) {
+    func get<T: Codable>(with request: URLRequest, completion: @escaping (Response<[T]>) -> Void) {
         let task = session.dataTask(with: request) { (data, response, error) in guard error == nil else {
             completion(.error(error!))
             return
@@ -29,6 +29,17 @@ extension APIClient {
                 print("Error: with response!")
                 return
             }
+            
+            // decode JSON object from API response
+            guard let value = try? JSONDecoder().decode([T].self, from: data!) else {
+                print("Decoder error!")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                completion(.success(value))
+            }
         }
+        task.resume()
     }
 }
