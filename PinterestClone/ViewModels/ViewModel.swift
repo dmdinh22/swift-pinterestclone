@@ -62,13 +62,13 @@ class ViewModel {
             DispatchQueue.global(qos: .background).async(group: group) {
                 group.enter()
                 
-                guard let imageData = try? Data(contentsOf: URL(string: "")!) else {
-                    self.showError?(APIError.unknown)
+                guard let imageData = try? Data(contentsOf: photo.urls.thumb) else {
+                    self.showError?(APIError.imageDownload)
                     return
                 }
                 
                 guard let image = UIImage(data: imageData) else {
-                    self.showError?(APIError.unknown)
+                    self.showError?(APIError.imageConvert)
                     return
                 }
                 
