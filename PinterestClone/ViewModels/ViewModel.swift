@@ -62,7 +62,7 @@ class ViewModel {
             DispatchQueue.global(qos: .background).async(group: group) {
                 group.enter()
                 
-                guard let imageData = try? Data(contentsOf: photo.urls.thumb) else {
+                guard let imageData = try? Data(contentsOf: photo.urls.small) else {
                     self.showError?(APIError.imageDownload)
                     return
                 }
